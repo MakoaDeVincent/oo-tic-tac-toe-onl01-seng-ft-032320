@@ -105,11 +105,11 @@ class TicTacToe
   end
 
   def draw?
-  if won? 
+  if won?
 			return false
-		elsif full? == false 
-			return false 
-		else 
+		elsif full? == false
+			return false
+		else
 			return true
 		end
 end
@@ -126,13 +126,13 @@ def winner
 	    return @board[winning_combo[0]]
 	 end
 end
-def play 
+def play
   while over? == false
     	turn
     end
     if draw?
     	puts "Cat's Game!"
-    elsif winner == "X" 
+    elsif winner == "X"
     	puts "Congratulations X!"
     elsif winner == "O"
     	puts "Congratulations O!"
