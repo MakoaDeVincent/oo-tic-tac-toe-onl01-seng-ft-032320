@@ -100,6 +100,10 @@ class TicTacToe
     @board.all?{|spot| spot != " "}
   end
 
+  def draw?
+    full? && !won?
+  end
+
 
 
 
