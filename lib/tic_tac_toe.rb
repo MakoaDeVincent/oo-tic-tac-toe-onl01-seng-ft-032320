@@ -113,14 +113,9 @@ class TicTacToe
   end
 
   def winner
-    index = []
-    index = won?
-    if index == false
-      return nil
-    elsif @board[index[0]] == "X"
-        return "X"
-    else
-        return "O"
+    winning_combo = won?
+    if winning_combo
+      return @board[winning_combo[0]]
     end
   end
 
