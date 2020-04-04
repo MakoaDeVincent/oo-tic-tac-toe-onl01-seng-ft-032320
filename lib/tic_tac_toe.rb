@@ -96,6 +96,10 @@ class TicTacToe
   return false
   end
 
+  def full?
+    @board.all?{|spot| spot != " "}
+  end
+
 
 
 
