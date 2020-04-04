@@ -104,32 +104,38 @@ class TicTacToe
     full? && !won?
   end
 
-  def over?
-    if won? || full? == true
-      return true
-    else
-      return false
+  def draw?
+  if won? 
+			return false
+		elsif full? == false 
+			return false 
+		else 
+			return true
+		end
+end
+def over?
+  if won? || draw? == true
+			return true
+		else
+			return false
+		end
+end
+def winner
+  winning_combo = won?
+	 if winning_combo
+	    return @board[winning_combo[0]]
+	 end
+end
+def play 
+  while over? == false
+    	turn
     end
-  end
-
-  def winner
-    winning_combo = won?
-    if winning_combo
-      return @board[winning_combo[0]]
-    end
-  end
-
-  def play
-    while over? == false
-      turn
-    end
-
     if draw?
-      puts "Cat's Game!"
-    elsif winner == "X"
-      puts "Congratulations X!"
-    elsif winner =="O"
-      puts "Congratulations O!"
+    	puts "Cat's Game!"
+    elsif winner == "X" 
+    	puts "Congratulations X!"
+    elsif winner == "O"
+    	puts "Congratulations O!"
     end
   end
 end
